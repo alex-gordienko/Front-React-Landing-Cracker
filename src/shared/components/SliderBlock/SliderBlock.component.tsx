@@ -2,7 +2,12 @@ import React, { useState } from 'react';
 
 import { 
     StyledSliderBlock
-} from './SliderBlock.styled'
+} from './SliderBlock.styled';
+
+import { ReactComponent as SoyBean } from '../../../assets/soybean.svg';
+import { ReactComponent as Sesame } from '../../../assets/sesame.svg';
+import { ReactComponent as Wheat } from '../../../assets/wheat.svg';
+import { ReactComponent as Corn } from '../../../assets/corn.svg';
 
 import Slider from './Slider';
 
@@ -43,10 +48,10 @@ const SliderBlock = ({maxSum, onSetCracker}:ISliderBlock)=>{
     }
     return(
         <StyledSliderBlock>
-            <Slider id="0" color='#00A651' value={cracker[0]} maxVal={100} onChange={onChange}/>
-            <Slider id="1" color='#49743F' value={cracker[1]} maxVal={100} onChange={onChange}/>
-            <Slider id="2" color='#ABA000' value={cracker[2]} maxVal={100} onChange={onChange}/>
-            <Slider disabled={true} id="3" color='#989795' value={cracker[3]} maxVal={100} onChange={onChange}/>
+            <Slider Icon={SoyBean} id="0" color='#00A651' value={cracker[0]} maxVal={100} onChange={onChange}/>
+            <Slider Icon={Sesame} id="1" color='#49743F' value={cracker[1]} maxVal={100} onChange={onChange}/>
+            <Slider Icon={Wheat} id="2" color='#ABA000' value={cracker[2]} maxVal={100} onChange={onChange}/>
+            <Slider Icon={Corn}disabled={true} id="3" color='#989795' value={cracker[3]} maxVal={100} onChange={onChange}/>
         </StyledSliderBlock>
     )
 

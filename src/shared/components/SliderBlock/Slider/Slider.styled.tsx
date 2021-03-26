@@ -2,15 +2,13 @@ import styled from '@emotion/styled';
 
 
 export const StyledSlider = styled.div<{color?:string}>`
-width: 100%;
+width: 100vh;
 display: inline-flex;
-margin: auto 10px;
 
 input[type=range] {
-    height: 25px;
     -webkit-appearance: none;
-    margin: 10px 0;
-    width: 80%;
+    margin: auto 15px;
+    width: 100%;
     background: transparent;
   }
   input[type=range]:focus {
@@ -29,8 +27,8 @@ input[type=range] {
   input[type=range]::-webkit-slider-thumb {
     box-shadow: 0px 0px 0px #000000;
     border: 1px solid #2497E3;
-    height: 18px;
-    width: 18px;
+    height: 2.5vh;
+    width: 2.5vh;
     border-radius: 25px;
     background: white;
     cursor: pointer;

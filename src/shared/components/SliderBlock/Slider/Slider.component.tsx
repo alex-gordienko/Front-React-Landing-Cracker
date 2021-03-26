@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { ReactComponentElement } from 'react';
 
 import {
     StyledSlider
 } from './Slider.styled';
 
 interface ISlider {
+    Icon?: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
     id?: string;
     color: string;
     value: number;
@@ -13,10 +14,11 @@ interface ISlider {
     onChange: (e: React.FormEvent<HTMLInputElement>) => void;
 }
 
-const Slider = ({id, color, disabled, value, maxVal, onChange}:ISlider)=>{
+const Slider = ({id, Icon, color, disabled, value, maxVal, onChange}:ISlider)=>{
 
     return(
         <StyledSlider color={color}>
+            {Icon? <Icon style={{width: '30px', height:'30px', fill:color}}/>: null}
             <input 
             disabled={disabled}
             id={id}

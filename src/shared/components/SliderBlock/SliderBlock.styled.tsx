@@ -1,7 +1,8 @@
 import styled from '@emotion/styled';
 
 export const StyledSliderBlock = styled.div`
-    display: inline-block;
+    display: flex;
+    flex-flow: column;
     margin: 20px auto;
-    width: 100%;
+    width: max-content;
 `;

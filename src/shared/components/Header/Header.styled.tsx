@@ -13,8 +13,9 @@ export const HeaderContainer = styled.header`
 
 export const HeaderFullTopBlock = styled.div`
     width: 100%;
-    height: 30px;
+    height: 40px;
     background: ${props=> props.theme.background.header.topMenu};
+    display: inline-flex;
 `;
 
 export const HeaderFullBottomBlock = styled.div`

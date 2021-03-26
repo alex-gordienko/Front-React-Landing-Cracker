@@ -2,13 +2,48 @@ import styled from '@emotion/styled'
 
 export const CrackerConstructorContainer = styled.div`
     background: ${props=> props.theme.background.body.overPicWhite};
-    position: absolute;
-    width: 50%;
-    height: min-content;
-    left: 50%;
-    bottom: 0px;
-    z-index: 100;
-    transform: translate(-50%, -10%);
+    display: inline-flex;
+    flex-flow: row;
+    
+    @media (min-width:1500px){
+        position: absolute;
+        width: 50%;
+        height: min-content;
+        left: 50%;
+        bottom: 10vh;
+        z-index: 100;
+        transform: translate(-50%, 0%);
+
+        vertical-align: center;
+        display: inline-block;
+        margin: 0;
+    }
+    @media (min-width:1200px) and (max-width:1499px){
+        position: absolute;
+        width: 50%;
+        height: min-content;
+        left: 50%;
+        bottom: 10vh;
+        z-index: 100;
+        transform: translate(-50%, 0%);
+
+        vertical-align: center;
+        display: inline-block;
+        margin: 0;
+    }
+    @media (min-width: 100px) and (max-width: 1199px){
+        position: relative;
+        width: 50%;
+        height: min-content;
+        left: 50%;
+        z-index: 100;
+        transform: translate(-50%, 0%);
+
+        vertical-align: center;
+        display: inline-block;
+        margin: 0;
+        background: ${props=> props.theme.background.body.overPic};
+    }
 `;
 
 export const Label = styled.div`

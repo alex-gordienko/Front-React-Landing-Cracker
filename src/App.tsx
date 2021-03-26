@@ -54,7 +54,7 @@ const App =()=>{
       <div>
         <Header 
             selectedLang={lang} 
-            currentCart={cart} 
+            currentCart={cart.filter(elem=> elem.value!==0)} 
             onDelete={onDelete}
             onLangSelect={(e)=>setLang(e)}
         />
