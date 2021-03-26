@@ -13,19 +13,23 @@ import {
 
 import Search from './Search';
 import LanguageSelector from './LanguageSelector';
+import Cart from './Cart';
+import { ICracker } from '../../../App';
 
 interface IHeaderProps{
     selectedLang: number;
+    currentCart: ICracker[];
+    onDelete: (id:number) => void;
     onLangSelect: (value: number)=> void;
 }
 
-const Header = ({ selectedLang, onLangSelect}:IHeaderProps)=>{
+const Header = ({ selectedLang, currentCart, onDelete, onLangSelect}:IHeaderProps)=>{
     const language = useContext<ILanguage>(LanguageContext);
 
     return(
         <HeaderContainer>
             <HeaderFullTopBlock>
-
+                <Cart elements={currentCart} onDelete={onDelete}/>
             </HeaderFullTopBlock>
             <HeaderFullBottomBlock>
                 <HeaderBottomLeftBlock>

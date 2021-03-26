@@ -3,33 +3,23 @@ import React, { useState } from 'react';
 import {
     CrackerConstructorContainer,
     Label,
-    CurrentValue
+    CurrentValue,
+    AddtoCart
 } from './CrackerConstructor.styled';
 
 import SliderBlock from '../SliderBlock';
+import Select from '../Select';
+import { ICracker, zeroCart } from '../../../App';
 
 
 interface ICrackerConstructor{
     maxSum: number;
-    onSetCracker: (cracker: {
-        ingridient1: number; 
-        ingridient2: number; 
-        ingridient3: number; 
-        ingridient4: number; 
-        packSize: number
-    })=> void;
+    onSetCracker: (cracker: ICracker)=> void;
 }
 
 const CrackerConstructor = ({maxSum, onSetCracker}:ICrackerConstructor)=>{
 
-    const [ingridients, setIngridients] = useState({
-        ing1:0, 
-        ing2:0, 
-        ing3:0, 
-        ing4:0, 
-        packSize:1,
-        value:0
-    });
+    const [ingridients, setIngridients] = useState(zeroCart);
 
     const getIngridients = (params: {
         ing1: number;
@@ -48,15 +38,30 @@ const CrackerConstructor = ({maxSum, onSetCracker}:ICrackerConstructor)=>{
             })
     }
 
+    const onPackSelect = (item: number)=>{
+        setIngridients({
+            ...ingridients,
+            value:(ingridients.ing1*0.45
+                +ingridients.ing2*0.3
+                +ingridients.ing3*0.6
+                +ingridients.ing4*0.4)*item,
+            packSize:item
+        })
+    }
+
     return(
         <CrackerConstructorContainer>
             <Label>
                 Cracker constructor
             </Label>
             <CurrentValue>
-                Current value: {ingridients.value} 
+                Current value: {ingridients.value} €
             </CurrentValue>
             <SliderBlock maxSum={maxSum} onSetCracker={getIngridients}/>
+            <Select items={[['Small Pack', 2], ['Medium Pack', 4], ['Large Pack', 10]]} onSelect={onPackSelect}/>
+            <AddtoCart onClick={()=>onSetCracker(ingridients)}>
+                <div className='butt-content'></div>
+            </AddtoCart>
         </CrackerConstructorContainer>
     )
 

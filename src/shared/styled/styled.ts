@@ -8,6 +8,7 @@ export interface ITheme {
         };
         body:{
             container: string;
+            hover: string;
             subcontainer: string;
             overPic: string;
             overPicWhite: string;
@@ -27,7 +28,9 @@ export interface ITheme {
         body:{
             text:{
                 default: string;
+                hover: string;
                 overPic: string;
+                colored: string;
             }
             styledElements: string;
         };

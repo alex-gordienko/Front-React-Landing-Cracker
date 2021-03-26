@@ -4,8 +4,9 @@ import styled from '@emotion/styled';
 export const StyledContainer = styled.div`
     display: block;
     width: 100%;
-    height: auto;
+    height: max-content;
     position: relative;
+    z-index: 20;
 `;
 
 export const PictureBlock = styled.div`
@@ -25,6 +26,7 @@ export const Picture = styled.div<{isRightSide?:boolean}>`
     min-height: 250px;
     position: relative;
     overflow: hidden;
+    z-index: 30;
 
     .label{
         margin: 0;
@@ -32,7 +34,7 @@ export const Picture = styled.div<{isRightSide?:boolean}>`
         font-family: "Fredoka One";
         font-size: 2em;
         text-transform: uppercase;
-        width: max-content;
+        width: 25%;
         position: absolute;
         top: 120px;
         left: ${props=> props.isRightSide ? '30%':'70%'};
@@ -42,7 +44,7 @@ export const Picture = styled.div<{isRightSide?:boolean}>`
 
     img{
         width: 100%;
-        height: auto;
+        min-height: max-content;
         position: relative;
     };
 
@@ -53,7 +55,7 @@ export const Picture = styled.div<{isRightSide?:boolean}>`
         height: auto;
         background: ${props=> props.theme.background.body.overPic};
         color: ${props=> props.theme.color.body.text.default};
-        top: 200px;
+        top: 20vh;
         ${props=> props.isRightSide ? 'right:0':'left: 0; text-align: end'};
         margin: 0;
         position: absolute;
@@ -61,7 +63,7 @@ export const Picture = styled.div<{isRightSide?:boolean}>`
 
         .text{
             width: 70%;
-            font-size: 3vh;
+            font-size: 1em;
             margin: 30px 0px 30px 80px;
         }
         &:after{

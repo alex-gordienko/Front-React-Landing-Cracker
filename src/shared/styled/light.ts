@@ -10,6 +10,7 @@ const light:ITheme = {
         },
         body:{
             container: 'white',
+            hover: 'rgba(75,0,130, 0.5)',
             subcontainer: 'white',
             overPic: 'rgba(0,0,0, 0.5)',
             overPicWhite: 'rgba(255,255,255, 0.7)'
@@ -29,7 +30,9 @@ const light:ITheme = {
         body:{
             text:{
                 default: 'white',
-                overPic: '#333333'
+                hover: 'indigo',
+                overPic: '#333333',
+                colored: '#FF4200'
             },
             styledElements: 'white'
         },

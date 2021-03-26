@@ -11,21 +11,27 @@ import {FullWidthConstant} from './Content.constants'
 import ContentContainer from './ContentContainer';
 import CrackerConstructor from '../CrackerConstructor';
 
+interface IBody{
+    onSetCracker: (cracker: {
+        ing1: number; 
+        ing2: number; 
+        ing3: number; 
+        ing4: number; 
+        packSize: number;
+        value: number;
+    })=> void;
+}
 
-const Body = () => {
+const Body = ({onSetCracker}:IBody) => {
 
     const language = useContext<ILanguage>(LanguageContext);
-
-    const watch = (e:any)=>{
-        console.log(e)
-    }
 
     return(
         <StyledBody>
             <ContentContainer 
                 data={FullWidthConstant(language)}
                 additionalBlock={{
-                    children:<CrackerConstructor maxSum={100} onSetCracker={watch}/>, 
+                    children:<CrackerConstructor maxSum={100} onSetCracker={onSetCracker}/>, 
                     pasteIndex:1
                 }}
                 />
