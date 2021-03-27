@@ -15,7 +15,7 @@ interface IContentContainerProps{
     additionalBlock?: {
         children: JSX.Element;
         pasteIndex: number;
-    }
+    }[]
 }
 
 const ContentContainer = ({data, additionalBlock}: IContentContainerProps) =>{
@@ -33,7 +33,7 @@ const ContentContainer = ({data, additionalBlock}: IContentContainerProps) =>{
                                     <p className='text'>{picture.text}</p>
                                 }
                             </div>
-                            {additionalBlock && additionalBlock.pasteIndex===index && additionalBlock.children}
+                            {additionalBlock && additionalBlock[index].children}
                         </Picture>
                     )
                 })}

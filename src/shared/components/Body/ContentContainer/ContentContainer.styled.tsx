@@ -38,7 +38,7 @@ export const Picture = styled.div<{isRightSide?:boolean}>`
             text-transform: uppercase;
             width: 25vh;
             position: absolute;
-            top: 10vh;
+            top: 10%;
             left: ${props=> props.isRightSide ? '30%':'70%'};
             z-index: 20;
             transform: translate(-50%, -50%);
@@ -57,7 +57,7 @@ export const Picture = styled.div<{isRightSide?:boolean}>`
             height: auto;
             background: ${props=> props.theme.background.body.overPic};
             color: ${props=> props.theme.color.body.text.default};
-            top: 10vh;
+            top: 10%;
             ${props=> props.isRightSide ? 'right:0':'left: 0; text-align: end'};
             margin: 0;
             position: absolute;
@@ -104,7 +104,7 @@ export const Picture = styled.div<{isRightSide?:boolean}>`
             text-transform: uppercase;
             width: 25vh;
             position: absolute;
-            top: 10vh;
+            top: 10%;
             left: ${props=> props.isRightSide ? '30%':'70%'};
             z-index: 20;
             transform: translate(-50%, -50%);
@@ -123,7 +123,7 @@ export const Picture = styled.div<{isRightSide?:boolean}>`
             height: auto;
             background: ${props=> props.theme.background.body.overPic};
             color: ${props=> props.theme.color.body.text.default};
-            top: 10vh;
+            top: 10%;
             ${props=> props.isRightSide ? 'right:0':'left: 0; text-align: end'};
             margin: 0;
             position: absolute;
@@ -170,7 +170,7 @@ export const Picture = styled.div<{isRightSide?:boolean}>`
             text-transform: uppercase;
             width: 25%;
             position: absolute;
-            top: 20vh;
+            top: 20%;
             left: ${props=> props.isRightSide ? '30%':'70%'};
             z-index: 20;
             transform: translate(-50%, -50%);

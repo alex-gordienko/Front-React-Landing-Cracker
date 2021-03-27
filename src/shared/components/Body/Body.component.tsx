@@ -3,7 +3,8 @@ import React, { useContext } from 'react';
 import LanguageContext, {ILanguage} from '../../language/language';
 
 import {
-    StyledBody
+    StyledBody,
+    TasteIt
 } from './Body.styled';
 
 import {FullWidthConstant} from './Content.constants'
@@ -26,14 +27,23 @@ const Body = ({onSetCracker}:IBody) => {
 
     const language = useContext<ILanguage>(LanguageContext);
 
+    const TasteItButton = () =>{
+        return <TasteIt>
+            <div className='butt-content'>Taste it</div>
+        </TasteIt>
+    }
+
     return(
         <StyledBody>
             <ContentContainer 
                 data={FullWidthConstant(language)}
-                additionalBlock={{
+                additionalBlock={[{
+                    children: TasteItButton(),
+                    pasteIndex: 0
+                },{
                     children:<CrackerConstructor maxSum={100} onSetCracker={onSetCracker}/>, 
                     pasteIndex:1
-                }}
+                }]}
                 />
         </StyledBody>
     )

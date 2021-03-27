@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 
 export const CrackerConstructorContainer = styled.div`
-    background: ${props=> props.theme.background.body.overPicWhite};
+    box-shadow: 4px 4px 10px ${props=> props.theme.color.body.text.colored};
     display: inline-flex;
     flex-flow: row;
     
@@ -30,6 +30,7 @@ export const CrackerConstructorContainer = styled.div`
         vertical-align: center;
         display: inline-block;
         margin: 0;
+        background:${props=> props.theme.background.body.overPicWhite};
     }
     @media (min-width: 100px) and (max-width: 1199px){
         position: relative;
@@ -42,7 +43,6 @@ export const CrackerConstructorContainer = styled.div`
         vertical-align: center;
         display: inline-block;
         margin: 0;
-        background: ${props=> props.theme.background.body.overPic};
     }
 `;
 
@@ -73,7 +73,7 @@ export const AddtoCart = styled.div`
     width: max-content;
     min-width: 30px;
     height: 30px;
-    margin: 15px 100px 15px auto;
+    margin: 15px 100px 20px auto;
     border-radius: 15px;
     border: 1px solid ${props=>props.theme.color.body.text.colored};
     background: ${props=>props.theme.color.body.text.colored};

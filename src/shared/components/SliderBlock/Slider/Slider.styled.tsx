@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 
 export const StyledSlider = styled.div<{color?:string}>`
-width: 100vh;
+width: 100%;
 display: inline-flex;
 
 input[type=range] {

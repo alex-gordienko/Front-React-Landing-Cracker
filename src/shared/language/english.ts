@@ -29,9 +29,9 @@ const english:ILanguage = {
         }
     },
     footer:{
-        label1: 'About the Company',
-        label2: 'Services',
-        label3: 'Contact information'
+        label1: 'Phone',
+        label2: 'Adress',
+        label3: 'Share us'
     }
 }
 

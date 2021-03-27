@@ -11,25 +11,31 @@ export const FooterLabel = styled.p`
     font-weight: bolder;
     color: ${props => props.theme.color.footer.text.label};
     margin-left: 20px;
+    font-family: 'Avenir';
+    font-size: 1em;
+    font-weight: bolder;
+    text-align: center;
 `;
 
 export const FooterList = styled.ul`
     list-style: none;
-    margin-left: 20px;
     padding: 0;
-    width: 100%;
     height: 50%;
-    display: inline-block;
+    margin: 10px auto;
+    display: inline-flex;
+    flex-flow: column;
+    width: 100%;
 `;
 
 export const FooterListItem = styled.li`
     margin: 5px 2px;
+    text-align: center;
 `;
 
 
 export const FooterLeftBlock = styled.div`
     color: ${props => props.theme.color.footer.text.default};
-    margin: 0px auto 0px 50px;
+    margin: 0px auto 0px auto;
     width: calc(100%/3 - 80px);
     position: relative;
 
@@ -54,13 +60,6 @@ export const FooterCenterBlock = styled.div`
     width: calc(100%/3 + 160px);
     position: relative;
 
-    ul{
-        li{
-            width: 45%;
-            display: inline-flex;
-            flex-flow: row;
-        }
-    };
 
     &:after{
         content: '';
